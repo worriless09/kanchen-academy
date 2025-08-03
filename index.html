@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanchen Academy - Premier UPSC, SSC & Competitive Exam Coaching</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Kanchen Academy</h2>
+                <span class="tagline">Excellence in Competitive Exams</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#faculty" class="nav-link">Faculty</a>
+                <a href="#testimonials" class="nav-link">Success Stories</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="btn btn--primary nav-cta">Book Trial Class</button>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Transform Your Dreams into <span class="highlight">Civil Service Success</span></h1>
+                    <p class="hero-description">Join India's most innovative coaching institute combining traditional teaching excellence with AI-powered learning tools. Specialized preparation for UPSC, SSC, and State PCS examinations.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Successful Students</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <button class="btn btn--primary btn--lg" id="heroCtaMain">Book Your Free Trial Class Today!</button>
+                        <button class="btn btn--outline btn--lg" id="heroCtaSecondary">Explore Courses</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <h3>🎯 AI-Powered Learning</h3>
+                        <p>Personalized study paths with spaced repetition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Kanchen Academy?</h2>
+                <p>Experience the future of competitive exam preparation with our innovative learning ecosystem</p>
+            </div>
+            <div class="features-grid" id="featuresGrid">
+                <!-- Features will be dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Courses</h2>
+                <p>Comprehensive preparation programs designed for success</p>
+            </div>
+            
+            <div class="course-filters">
+                <button class="filter-btn active" data-category="all">All Courses</button>
+                <button class="filter-btn" data-category="UPSC">UPSC</button>
+                <button class="filter-btn" data-category="SSC">SSC</button>
+                <button class="filter-btn" data-category="State PCS">State PCS</button>
+            </div>
+
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Courses will be dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="faculty">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Expert Faculty</h2>
+                <p>Learn from experienced educators and former civil servants</p>
+            </div>
+            <div class="faculty-grid" id="facultyGrid">
+                <!-- Faculty will be dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success Stories</h2>
+                <p>Hear from our successful students who achieved their dreams</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <!-- Testimonials will be dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Ready to start your journey to success? Contact us for personalized guidance and course recommendations.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@kanchenacademy.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Education Hub, New Delhi - 110001</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Full Name*</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email*</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Phone*</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="interest">Area of Interest*</label>
+                            <select id="interest" name="interest" class="form-control" required>
+                                <option value="">Select your exam category</option>
+                                <option value="UPSC">UPSC Civil Services</option>
+                                <option value="SSC">SSC (CGL/CHSL)</option>
+                                <option value="State PCS">State PCS</option>
+                                <option value="Other">Other Competitive Exams</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="inquiry">Inquiry Type</label>
+                            <select id="inquiry" name="inquiry" class="form-control">
+                                <option value="">Select inquiry type</option>
+                                <option value="course-info">Course Information</option>
+                                <option value="fee-structure">Fee Structure</option>
+                                <option value="batch-timing">Batch Timings</option>
+                                <option value="trial-class">Trial Class</option>
+                                <option value="counseling">Career Counseling</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" class="form-control" placeholder="Tell us about your preparation goals and any specific questions..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                        
+                        <p class="form-note">By submitting this form, you agree to our <a href="#" target="_blank">Privacy Policy</a> and consent to be contacted by our admissions team.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kanchen Academy</h3>
+                    <p>Empowering aspirants with knowledge, technology, and unwavering support to achieve their civil service dreams.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <a href="#courses">Courses</a>
+                        <a href="#faculty">Faculty</a>
+                        <a href="#testimonials">Success Stories</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Courses</h4>
+                        <a href="#">UPSC CSE</a>
+                        <a href="#">SSC CGL/CHSL</a>
+                        <a href="#">State PCS</a>
+                        <a href="#">Mock Tests</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Student Login</a>
+                        <a href="#">Download App</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kanchen Academy. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal hidden" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Thank You!</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Your message has been sent successfully. Our admissions team will contact you within 24 hours.</p>
+                <button class="btn btn--primary" id="modalOk">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
