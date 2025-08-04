@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 import { createServerSupabaseClient } from '@/lib/supabase'
-import HeroSection from '@/components/HeroSection'
+import HeroSection from '@/components/features/HeroSection'
 import FeaturesSection from '@/components/FeaturesSection'
 import CoursesSection from '@/components/CoursesSection'
 import TestimonialsSection from '@/components/TestimonialsSection' 
