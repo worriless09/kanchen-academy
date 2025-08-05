@@ -395,7 +395,7 @@ export default function QuizBuilder({
           <Input
             id="title"
             value={quiz.title}
-            onChange={(e) => setQuiz(prev => ({ ...prev, title: e.target.value }))}
+            onChange={(e: { target: { value: any; }; }) => setQuiz(prev => ({ ...prev, title: e.target.value }))}
             placeholder="Enter quiz title"
             className="w-full"
           />
@@ -405,7 +405,7 @@ export default function QuizBuilder({
           <Label htmlFor="subject">Subject *</Label>
           <Select 
             value={quiz.subject_id} 
-            onValueChange={(value) => setQuiz(prev => ({ ...prev, subject_id: value }))}
+            onValueChange={(value: any) => setQuiz(prev => ({ ...prev, subject_id: value }))}
           >
             <SelectTrigger>
               <SelectValue placeholder="Select subject" />
@@ -426,7 +426,7 @@ export default function QuizBuilder({
         <Textarea
           id="description"
           value={quiz.description}
-          onChange={(e) => setQuiz(prev => ({ ...prev, description: e.target.value }))}
+          onChange={(e: { target: { value: any; }; }) => setQuiz(prev => ({ ...prev, description: e.target.value }))}
           placeholder="Brief description of the quiz"
           rows={3}
         />
@@ -437,7 +437,7 @@ export default function QuizBuilder({
         <Textarea
           id="instructions"
           value={quiz.instructions}
-          onChange={(e) => setQuiz(prev => ({ ...prev, instructions: e.target.value }))}
+          onChange={(e: { target: { value: any; }; }) => setQuiz(prev => ({ ...prev, instructions: e.target.value }))}
           placeholder="Instructions for students taking the quiz"
           rows={4}
         />
@@ -448,7 +448,7 @@ export default function QuizBuilder({
           <Label htmlFor="category">Category *</Label>
           <Select 
             value={quiz.category_id} 
-            onValueChange={(value) => setQuiz(prev => ({ ...prev, category_id: value }))}
+            onValueChange={(value: any) => setQuiz(prev => ({ ...prev, category_id: value }))}
           >
             <SelectTrigger>
               <SelectValue placeholder="Select category" />
@@ -470,7 +470,7 @@ export default function QuizBuilder({
             type="number"
             min="1"
             value={quiz.time_limit}
-            onChange={(e) => setQuiz(prev => ({ 
+            onChange={(e: { target: { value: string; }; }) => setQuiz(prev => ({ 
               ...prev, 
               time_limit: parseInt(e.target.value) || 0 
             }))}
@@ -484,7 +484,7 @@ export default function QuizBuilder({
             type="number"
             min="0"
             value={quiz.passing_marks}
-            onChange={(e) => setQuiz(prev => ({ 
+            onChange={(e: { target: { value: string; }; }) => setQuiz(prev => ({ 
               ...prev, 
               passing_marks: parseFloat(e.target.value) || 0 
             }))}
@@ -501,7 +501,7 @@ export default function QuizBuilder({
             step="0.25"
             min="0"
             value={quiz.negative_marking}
-            onChange={(e) => setQuiz(prev => ({ 
+            onChange={(e: { target: { value: string; }; }) => setQuiz(prev => ({ 
               ...prev, 
               negative_marking: parseFloat(e.target.value) || 0 
             }))}
@@ -515,7 +515,7 @@ export default function QuizBuilder({
             type="number"
             min="1"
             value={quiz.max_attempts}
-            onChange={(e) => setQuiz(prev => ({ 
+            onChange={(e: { target: { value: string; }; }) => setQuiz(prev => ({ 
               ...prev, 
               max_attempts: parseInt(e.target.value) || 1 
             }))}
@@ -543,7 +543,7 @@ export default function QuizBuilder({
             </div>
             <Switch
               checked={quiz.question_randomization}
-              onCheckedChange={(checked) => setQuiz(prev => ({ 
+              onCheckedChange={(checked: any) => setQuiz(prev => ({ 
                 ...prev, 
                 question_randomization: checked 
               }))}
@@ -557,7 +557,7 @@ export default function QuizBuilder({
             </div>
             <Switch
               checked={quiz.option_randomization}
-              onCheckedChange={(checked) => setQuiz(prev => ({ 
+              onCheckedChange={(checked: any) => setQuiz(prev => ({ 
                 ...prev, 
                 option_randomization: checked 
               }))}
@@ -571,7 +571,7 @@ export default function QuizBuilder({
             </div>
             <Switch
               checked={quiz.allow_review}
-              onCheckedChange={(checked) => setQuiz(prev => ({ 
+              onCheckedChange={(checked: any) => setQuiz(prev => ({ 
                 ...prev, 
                 allow_review: checked 
               }))}
@@ -585,7 +585,7 @@ export default function QuizBuilder({
             </div>
             <Switch
               checked={quiz.show_results_immediately}
-              onCheckedChange={(checked) => setQuiz(prev => ({ 
+              onCheckedChange={(checked: any) => setQuiz(prev => ({ 
                 ...prev, 
                 show_results_immediately: checked 
               }))}
@@ -599,7 +599,7 @@ export default function QuizBuilder({
             </div>
             <Switch
               checked={quiz.allow_retake}
-              onCheckedChange={(checked) => setQuiz(prev => ({ 
+              onCheckedChange={(checked: any) => setQuiz(prev => ({ 
                 ...prev, 
                 allow_retake: checked 
               }))}
@@ -624,7 +624,7 @@ export default function QuizBuilder({
             </div>
             <Switch
               checked={quiz.adaptive_difficulty}
-              onCheckedChange={(checked) => setQuiz(prev => ({ 
+              onCheckedChange={(checked: any) => setQuiz(prev => ({ 
                 ...prev, 
                 adaptive_difficulty: checked 
               }))}
@@ -638,7 +638,7 @@ export default function QuizBuilder({
             </div>
             <Switch
               checked={quiz.reasoning_analysis_enabled}
-              onCheckedChange={(checked) => setQuiz(prev => ({ 
+              onCheckedChange={(checked: any) => setQuiz(prev => ({ 
                 ...prev, 
                 reasoning_analysis_enabled: checked 
               }))}
@@ -663,7 +663,7 @@ export default function QuizBuilder({
             </div>
             <Switch
               checked={quiz.is_public}
-              onCheckedChange={(checked) => setQuiz(prev => ({ 
+              onCheckedChange={(checked: any) => setQuiz(prev => ({ 
                 ...prev, 
                 is_public: checked 
               }))}
@@ -677,7 +677,7 @@ export default function QuizBuilder({
             </div>
             <Switch
               checked={quiz.requires_enrollment}
-              onCheckedChange={(checked) => setQuiz(prev => ({ 
+              onCheckedChange={(checked: any) => setQuiz(prev => ({ 
                 ...prev, 
                 requires_enrollment: checked 
               }))}
@@ -691,7 +691,7 @@ export default function QuizBuilder({
             </div>
             <Switch
               checked={quiz.is_free}
-              onCheckedChange={(checked) => setQuiz(prev => ({ 
+              onCheckedChange={(checked: any) => setQuiz(prev => ({ 
                 ...prev, 
                 is_free: checked 
               }))}
@@ -707,7 +707,7 @@ export default function QuizBuilder({
                 min="0"
                 step="0.01"
                 value={quiz.price}
-                onChange={(e) => setQuiz(prev => ({ 
+                onChange={(e: { target: { value: string; }; }) => setQuiz(prev => ({ 
                   ...prev, 
                   price: parseFloat(e.target.value) || 0 
                 }))}
@@ -941,7 +941,7 @@ function QuestionEditor({
           <Label>Question Text *</Label>
           <Textarea
             value={question.question_text}
-            onChange={(e) => onUpdate(questionIndex, { question_text: e.target.value })}
+            onChange={(e: { target: { value: any; }; }) => onUpdate(questionIndex, { question_text: e.target.value })}
             placeholder="Enter your question here..."
             rows={3}
           />
@@ -953,7 +953,7 @@ function QuestionEditor({
             <Label>Type</Label>
             <Select
               value={question.question_type}
-              onValueChange={(value) => onUpdate(questionIndex, { 
+              onValueChange={(value: string) => onUpdate(questionIndex, { 
                 question_type: value as QuizQuestion['question_type'] 
               })}
             >
@@ -975,7 +975,7 @@ function QuestionEditor({
             <Label>Difficulty</Label>
             <Select
               value={question.difficulty_level.toString()}
-              onValueChange={(value) => onUpdate(questionIndex, { 
+              onValueChange={(value: string) => onUpdate(questionIndex, { 
                 difficulty_level: parseInt(value) 
               })}
             >
@@ -999,7 +999,7 @@ function QuestionEditor({
               min="0.5"
               step="0.5"
               value={question.marks}
-              onChange={(e) => onUpdate(questionIndex, { 
+              onChange={(e: { target: { value: string; }; }) => onUpdate(questionIndex, { 
                 marks: parseFloat(e.target.value) || 1 
               })}
             />
@@ -1011,7 +1011,7 @@ function QuestionEditor({
               type="number"
               min="30"
               value={question.estimated_time}
-              onChange={(e) => onUpdate(questionIndex, { 
+              onChange={(e: { target: { value: string; }; }) => onUpdate(questionIndex, { 
                 estimated_time: parseInt(e.target.value) || 60 
               })}
             />
@@ -1053,7 +1053,7 @@ function QuestionEditor({
 
                   <Input
                     value={option.option_text}
-                    onChange={(e) => onUpdateOption(questionIndex, optionIndex, {
+                    onChange={(e: { target: { value: any; }; }) => onUpdateOption(questionIndex, optionIndex, {
                       option_text: e.target.value
                     })}
                     placeholder={`Option ${optionIndex + 1}`}
@@ -1081,7 +1081,7 @@ function QuestionEditor({
           <Label>Explanation</Label>
           <Textarea
             value={question.explanation}
-            onChange={(e) => onUpdate(questionIndex, { explanation: e.target.value })}
+            onChange={(e: { target: { value: any; }; }) => onUpdate(questionIndex, { explanation: e.target.value })}
             placeholder="Explain the correct answer and why other options are incorrect..."
             rows={3}
           />
@@ -1093,7 +1093,7 @@ function QuestionEditor({
             <Label>Topic</Label>
             <Input
               value={question.topic}
-              onChange={(e) => onUpdate(questionIndex, { topic: e.target.value })}
+              onChange={(e: { target: { value: any; }; }) => onUpdate(questionIndex, { topic: e.target.value })}
               placeholder="Question topic"
             />
           </div>
@@ -1102,8 +1102,8 @@ function QuestionEditor({
             <Label>Tags (comma separated)</Label>
             <Input
               value={question.tags.join(', ')}
-              onChange={(e) => onUpdate(questionIndex, { 
-                tags: e.target.value.split(',').map(tag => tag.trim()).filter(Boolean)
+              onChange={(e: { target: { value: string; }; }) => onUpdate(questionIndex, { 
+                tags: e.target.value.split(',').map((tag: string) => tag.trim()).filter(Boolean)
               })}
               placeholder="tag1, tag2, tag3"
             />
@@ -1114,5 +1114,4 @@ function QuestionEditor({
   );
 }
 
-export default QuizBuilder;
 export type { Quiz, QuizQuestion, QuizOption };

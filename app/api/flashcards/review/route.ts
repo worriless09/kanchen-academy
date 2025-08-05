@@ -11,7 +11,7 @@ import { hrmClient } from '@/lib/services/hrm-client';
 
 export async function POST(request: NextRequest) {
   try {
-    const supabase = createClient();
+    const supabase = await createClient();
 
     // Verify authentication
     const { data: { user }, error: authError } = await supabase.auth.getUser();
@@ -156,7 +156,7 @@ export async function POST(request: NextRequest) {
 // app/api/flashcards/due/route.ts
 export async function GET(request: NextRequest) {
   try {
-    const supabase = createClient();
+    const supabase = await createClient();
 
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     if (authError || !user) {
