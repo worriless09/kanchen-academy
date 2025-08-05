@@ -181,7 +181,7 @@ export default function CourseCard({
                     </span>
                   )}
                   <div className="font-semibold text-sm">
-                    {formatPrice(effectivePrice)}
+                    {formatPrice(effectivePrice ?? 0)}
                   </div>
                 </div>
               </div>
@@ -287,7 +287,7 @@ export default function CourseCard({
               </div>
             )}
             <div className="text-xl font-bold text-green-600">
-              {formatPrice(effectivePrice)}
+              {formatPrice(effectivePrice ?? 0)}
             </div>
           </div>
         </div>

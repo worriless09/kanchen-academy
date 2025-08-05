@@ -25,7 +25,8 @@ import {
   CheckCircle2,
   AlertCircle,
   Trophy,
-  Flame
+  Flame,
+  Plus
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
@@ -55,6 +56,7 @@ interface RecentActivity {
   description: string;
   timestamp: string;
   metadata?: any;
+  name?: string;
 }
 
 interface StudyGoal {
@@ -85,8 +87,16 @@ interface LearningInsight {
   action_url?: string;
 }
 
+interface AppUser {
+  id: string;
+  email: string;
+  name?: string; // Optional or required based on your data
+  // other properties as needed
+}
+
+
 export default function StudentDashboard() {
-  const { user, loading } = useUser();
+  const { user, loading } = useUser() as { user: AppUser | null; loading: boolean };
   const [dashboardData, setDashboardData] = useState<{
     stats: DashboardStats;
     recent_activity: RecentActivity[];
@@ -527,7 +537,7 @@ export default function StudentDashboard() {
         <Card>
           <CardContent className="p-4 text-center">
             <div className="text-3xl font-bold text-green-600 mb-2">
-              {stats?.reasoning_improvement > 0 ? '+' : ''}{Math.round((stats?.reasoning_improvement || 0) * 100)}%
+              {(stats?.reasoning_improvement ?? 0) > 0 ? '+' : ''} {Math.round((stats?.reasoning_improvement ?? 0) * 100)}%
             </div>
             <p className="text-sm text-gray-600">Reasoning Improvement</p>
           </CardContent>
